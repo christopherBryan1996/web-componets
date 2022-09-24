@@ -17,6 +17,12 @@ class HeaderRaM extends HTMLElement{
         this.globalContainer.appendChild(this.divButton)
         this.shadow.appendChild(this.globalContainer)
     }
+    _hoverA(e){
+        e.target.style.color='red'
+    }
+    _hoverb(e){
+        e.target.style.color='black'
+    }
     connectedCallback(){
         const stylesButton=`
             padding: 0px 23px 0px 0px;
@@ -29,10 +35,14 @@ class HeaderRaM extends HTMLElement{
         this.ruteCharacter.href='../../templates/character.html'
         this.ruteCharacter.innerText='Character'
         this.ruteCharacter.style.cssText=stylesButton
+        this.ruteCharacter.onmouseleave=this._hoverb
+        this.ruteCharacter.onmouseenter=this._hoverA
 
         this.ruteEpisode.href='../../templates/episode.html'
         this.ruteEpisode.innerText='Episode'
         this.ruteEpisode.style.cssText=stylesButton
+        this.ruteEpisode.onmouseleave=this._hoverb
+        this.ruteEpisode.onmouseenter=this._hoverA
 
         this.globalContainer.style.cssText=`
             background: rgb(0,0,0,.5);
