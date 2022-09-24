@@ -13,7 +13,7 @@ class IndexContent extends HTMLElement{
         <h1 style="padding: 65px 0px 10px 20px;">Web componets</h1>
         <div style="padding: 0px 0px 10px 20px;">
             <p>This proyect is created with pure Web components</p>
-            <p>The header part is done like this</p>
+            <p>The header part was made like this.</p>
         </div>
         <div style="margin: 0 50px 40px 50px;">
             <pre style="background: aliceblue;
