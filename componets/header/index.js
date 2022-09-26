@@ -24,6 +24,9 @@ class HeaderRaM extends HTMLElement{
         e.target.style.color='black'
     }
     connectedCallback(){
+        const srcImage=this.getAttribute('srcImage')
+        const urlCharacter=this.getAttribute('urlCharacter')
+        const urlEpisode= this.getAttribute('urlEpisode')
         const stylesButton=`
             padding: 0px 23px 0px 0px;
             text-decoration: none;
@@ -32,13 +35,13 @@ class HeaderRaM extends HTMLElement{
         `
         this.ruteIndex.href='../../index.html'
         
-        this.ruteCharacter.href='../../templates/character.html'
+        this.ruteCharacter.href=urlCharacter
         this.ruteCharacter.innerText='Character'
         this.ruteCharacter.style.cssText=stylesButton
         this.ruteCharacter.onmouseleave=this._hoverb
         this.ruteCharacter.onmouseenter=this._hoverA
 
-        this.ruteEpisode.href='../../templates/episode.html'
+        this.ruteEpisode.href=urlEpisode
         this.ruteEpisode.innerText='Episode'
         this.ruteEpisode.style.cssText=stylesButton
         this.ruteEpisode.onmouseleave=this._hoverb
@@ -55,7 +58,7 @@ class HeaderRaM extends HTMLElement{
             width: 190px;
             border-radius: 100%;
             margin: 10px 0px 10px 24px;`
-        this.image.src='../../img/descarga.jfif'
+        this.image.src=srcImage
 
         
         this.divButton.style.cssText=`
