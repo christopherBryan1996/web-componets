@@ -89,7 +89,7 @@ const seeCharacter = (id) => {
             </style>
             <div class='modal'>
                 <div style='margin: 0 0px 2px 377px;'>
-                    <img src='../../img/cancelar.png' alt='close' class='close' style='cursor: pointer; width: 25px;'/>
+                    <img src='./img/cancelar.png' alt='close' class='close' style='cursor: pointer; width: 25px;'/>
                 </div>
                 <div class='content-modal'>
                     <img src='${json.image}' alt='Character' style='width: 239px; border-radius: 13px;'/>
