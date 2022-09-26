@@ -27,13 +27,14 @@ class HeaderRaM extends HTMLElement{
         const srcImage=this.getAttribute('srcImage')
         const urlCharacter=this.getAttribute('urlCharacter')
         const urlEpisode= this.getAttribute('urlEpisode')
+        const urlIndex=this.getAttribute('urlIndex')
         const stylesButton=`
             padding: 0px 23px 0px 0px;
             text-decoration: none;
             color: black;
             font-family: cursive;
         `
-        this.ruteIndex.href='../../index.html'
+        this.ruteIndex.href=urlIndex
         
         this.ruteCharacter.href=urlCharacter
         this.ruteCharacter.innerText='Character'

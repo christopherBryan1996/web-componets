@@ -4,12 +4,14 @@ class FooterRaM extends HTMLElement{
         super();
         this.shadow= this.attachShadow({mode:'open'})
         this.globalConteiner=document.createElement('div')
-        this.redes=[['https://github.com/christopherBryan1996','../../img/unnamed.png'],['https://www.linkedin.com/in/christopher-bryan-suarez-mancilla','../../img/LinkedIn-Logotipo.jpg'],]
+        this.redes=[['https://github.com/christopherBryan1996',''],['https://www.linkedin.com/in/christopher-bryan-suarez-mancilla',''],]
 
 
         this.shadow.appendChild(this.globalConteiner)
     }
     connectedCallback(){
+        this.redes[0][1]=this.getAttribute('srcImgG')
+        this.redes[1][1]=this.getAttribute('srcImgL')
         this.globalConteiner.style.cssText=`
             background: rgb(0,0,0);
             color: rgb(255,255,255);
